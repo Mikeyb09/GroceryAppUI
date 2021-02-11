@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="login-form">
+            <form #loginForm="ngForm" (ngSubmit)="loginUserClick()">
+                <div class="form-group">
+                  <label for="username">Username</label>
+
+                  <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" aria-describedby="usernameHelp">
+
+                  <small id="usernameHelp" class="form-text text-muted">Enter your username in this field.</small>
+
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" aria-describedby="usernameHelp">
+                  <small id="passwordHelp" class="form-text text-muted">Enter your password in this field</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
